@@ -13,11 +13,14 @@ body {
 .mycontent {
   position: relative;
   height: 100%;
+  border-bottom: 1px solid white;
   background-color: #000000;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 a:link {
@@ -111,34 +114,67 @@ a:visited h3 {
   text-align: center;
 }
 
+/* needed? */
+.box-content {
+  display: inline-block;
+  width: 100%;
+}
+
+#cool-stuff {
+  border-collapse: separate;
+  border-spacing: 30px;
+  border-radius: var(--rounded-box, 1rem);
+  margin-top: 50px;
+  margin-right: 5em;
+  margin-left: 5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#cool-stuff td {
+  width: 20%;
+  padding: 10px;
+  vertical-align: top;
+  border-radius: var(--rounded-box, 1rem);
+  border: 2px solid blue;
+  max-width: min(130px, 50vw);
+}
+
+/*
 .box {
   display: inline-block;
   width: 10em;
   margin: 10px;
   padding: 10px;
-  height: 200px;
+  min-height: 200px;
   width: 400px;
   border-radius: var(--rounded-box, 1rem);
   border: 2px solid blue;
-
 }
 
 .boxes {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 50px;
   margin: 50px;
+  flex: calc(vh);
 }
+*/
 
 .pycord {
   background-image: url('https://cdn.discordapp.com/splashes/881207955029110855/497cda195351cdf76d7fbc0a43ce4765.png?size=512');
-  background-size: 420px 220px;
+  background-size: cover;
 }
 
 .qwire {
   background-image: url('https://cdn.discordapp.com/attachments/796012588302991411/945522215435243621/image_1.png');
-  background-size: 420px 220px;
+  background-size: cover;
 }
 
 .btn {
@@ -157,8 +193,6 @@ a:visited h3 {
 
 .nav-bar {
   display: block;
-  /*justify-content: left;*/
-  /*align-items: left;*/
   text-align: center;
   background-color: #000000;
 }
@@ -191,19 +225,19 @@ a:visited h3 {
 
 #particles-js {
   position: absolute;
-  top: 0px;
   z-index: -1;
   width: 100%;
   height: 100%;
+  top: 0;
   background-color: #000000;
 }
 
 #particles-js canvas {
   display: block;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  opacity: 1;
-  -webkit-transition: opacity 0.8s ease, -webkit-transform 1.4s ease;
-  transition: opacity 0.8s ease, transform 1.4s ease;
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: #000000;
 }
