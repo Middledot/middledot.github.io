@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" style="--main-accent:#7289da;">
+<html lang="en">
   <head>
     <title>Oh hello</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="https://img.unocero.com/2021/08/rickroll_4k-1024x768.jpeg">
-    <link rel="stylesheet" type="text/css" href="mdot.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <!-- https://devicon.dev -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <!-- https://fontawesome.com/ -->
+    <script src="https://kit.fontawesome.com/bd7c664984.js" crossorigin="anonymous"></script>
     <!-- Discord Embed Rendering -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://middledot.github.io">
@@ -17,75 +21,181 @@
     <meta property="description" content="noice">
   </head>
   <body>
-    <div class="mycontent">
+    <!-- Header Buttons n Stuff -->
+    <div class="header">
       <img class="pfp" src="https://github.com/Middledot.png" width="50" height="50" alt="">
       <div class="nav-bar">
         <ul>
           <li>
             <a href="https://discord.com/users/719980255942541362">
-              <img src="img/discord.png" alt="discord account" width="30" height="30">
+              <i class="fa-brands fa-discord"></i>
             </a>
           </li>
           <li>
             <a href="https://github.com/Middledot">
-              <img src="img/github.png" alt="github account" width="30" height="30">
+              <i class="fa-brands fa-github"></i>
             </a>
           </li>
           <li>
-            <a href="https://reddit.com/u/MiddledotWasHere">
-              <img src="img/reddit.png" alt="reddit account" width="30" height="30">
+            <a href="https://g.dev/skyve">
+              <i class="fa-brands fa-google"></i>
             </a>
           </li>
           <li>
-            <a href="https://youtube.com/channel/UC11tkG-P5QFgRqpbSj6knoQ">
-              <img src="img/youtube.png" alt="yt account" width="34" height="23">
+            <a href="https://stackoverflow.com/users/14813579">
+              <i class="fa-brands fa-stack-overflow"></i>
             </a>
           </li>
           <li>
             <a href="mailto:middledot.productions@gmail.com">
-              <img src="img/mailto.png" alt="mail me" width="35" height="32">
+              <i class="fa-solid fa-envelope"></i>
             </a>
           </li>
         </ul>
       </div>
     </div>
-    <div class="mycontent-pt2">
+    <!-- Hi -->
+    <div class="section" id="about-me">
       <h1>Hello</h1>
       <div class="inner">
         <p style="font-size: 1.1rem;">I'm Middledot, and I make code. I'm mostly fluent in python while learning HTML and CSS.</p>
       </div>
     </div>
-      <div class="mycontent-pt2">
-        <h1>Cool Stuff</h1>
-        <table id="cool-stuff">
-          <tr>
-            <td class="qwire">
-              <h3>Qwire</h3>
+    <div class="section" id="works">
+      <h1>Cool Stuff</h1>
+      <section class="project-grid">
+        <div class="grid-item qwire project">
+          <div class="grid-content">
+            <div class="grid-text">
+              <h2>Qwire</h2>
               <p>Qwire (pronounced Q-Wire) is a multipurpose bot for server and personal utilities.</p>
               <p>It is powered by pycord and is currently in the works.</p>
-              <br>
-              <a href="https://discord.com/api/oauth2/authorize?client_id=769943952030826497&permissions=607513815&scope=bot%20applications.commands">
-                <button class="btn">Invite</button>
-              </a>
-            </td>
-            <td class="pycord">
-              <h3>Pycord</h3>
+            </div>
+            <div class="links">
+              <a href="https://qwire.xyz" class="btn">Website</a>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item pycord project">
+          <div class="grid-content">
+            <div class="grid-text">
+              <h2>Pycord</h2>
               <p>Pycord is a <a href="https://discord.dev">Discord API</a> Wrapper, forked from <a href="https://github.com/Rapptz/discord.py">discord.py</a>, that has majority coverage of the API's features and is continually maintained.</p>
-              <br>
-              <a href="https://github.com/Pycord-Development/pycord">
-                <button class="btn">GitHub</button>
-              </a>
-              <a href="https://pycord.dev/">
-                <button class="btn">Website</button>
-              </a>
-            </td>
-          </tr>
-        </table>
-      </div>
+            </div>
+            <div class="links">
+              <a href="https://github.com/Pycord-Development/pycord" class="btn">GitHub</a>
+              <a href="https://pycord.dev/" class="btn">Website</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Showing Off (as in the dropdowns took really long to make) -->
+    <div class="section" id="stack">
+      <section class="tech-grid">
+        <div class="tech-container">
+          <h1>Languages</h1>
+          <ul class="stack-icons">
+            <li class="stack-item"><i class="devicon-python-plain"></i></li>
+            <li class="stack-item"><i class="devicon-html5-plain"></i></li>
+            <li class="stack-item"><i class="devicon-css3-plain"></i></li>
+            <li class="stack-item"><i class="devicon-javascript-plain"></i></li>
+          </ul>
+        </div>
+        <div class="tech-container">
+          <h1>Technologies</h1>
+          <ul class="stack-icons">
+            <li class="stack-item">
+              <i class="devicon-postgresql-plain"></i>
+              <div class="dropdown-info" style="border-color: #336791">
+                <div class="dropdown-header" style="background-color: #336791">
+                  <p class="dd-header-title">PostgreSQL</p>
+                  <p class="dd-header-btns">– □ ✕</p>
+                </div>
+                <div class="dropdown-content">
+                  <div class="grid-text">
+                    SQL Relational Database I'm using for making <a href="#works">Qwire</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="stack-item">
+              <img src="img/blacksheep.png" height="90" width="100" />
+              <div class="dropdown-info" style="border-color: #fff;">
+                <div class="dropdown-header" style="background-color: #fff">
+                  <p class="dd-header-title" style="color: #000">Blacksheep</p>
+                  <p class="dd-header-btns" style="color: #000">– □ ✕</p>
+                </div>
+                <div class="dropdown-content">
+                  <div class="grid-text">
+                    An ASGI web framework in python
+                  </div>
+                  <div class="links">
+                    <a href="https://github.com/Neoteroi/BlackSheep" class="btn">GitHub</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="stack-item">
+              <i class="devicon-git-plain"></i>
+              <div class="dropdown-info" style="border-color: #f44d27">
+                <div class="dropdown-header" style="background-color: #f44d27">
+                  <p class="dd-header-title">Git</p>
+                  <p class="dd-header-btns">– □ ✕</p>
+                </div>
+                <div class="dropdown-content">
+                  <div class="grid-text">
+                    No introduction needed <span><img src="https://cdn.discordapp.com/emojis/853277767524679740.png?size=44&quality=lossless" width="20" height="20" /></span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="stack-item">
+              <i class="devicon-react-original"></i>
+              <div class="dropdown-info" style="border-color: #61dafb">
+                <div class="dropdown-header" style="background-color: #61dafb">
+                  <p class="dd-header-title">React</p>
+                  <p class="dd-header-btns">– □ ✕</p>
+                </div>
+                <div class="grid-text">
+                  <div class="dropdown-content">Frontend web <s>framework</s> library I'm learning for a future project</div>
+                </div>
+              </div>
+            </li>
+            <li class="stack-item">
+              <i class="devicon-django-plain"></i>
+              <div class="dropdown-info" style="border-color: #0c4b33">
+                <div class="dropdown-header" style="background-color: #0c4b33">
+                  <p class="dd-header-title">Django</p>
+                  <p class="dd-header-btns">– □ ✕</p>
+                </div>
+                <div class="dropdown-content">
+                  <div class="grid-text">
+                    Web framework for python backend that I used for <a href="https://qwire.xyz">Qwire's Website</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="stack-item">
+              <i class="devicon-mongodb-plain"></i>
+              <div class="dropdown-info" style="border-color: #4faa41">
+                <div class="dropdown-header" style="background-color: #4faa41">
+                  <p class="dd-header-title">MongoDB</p>
+                  <p class="dd-header-btns">– □ ✕</p>
+                </div>
+                <div class="dropdown-content">
+                  <div class="grid-text">
+                    NoSQL database I used to work with on <a href="#works">Qwire</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
     </div>
     <!-- Particles -->
     <div id="particles-js"></div>
     <script type="text/javascript" src="particles.js"></script>
-    <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
