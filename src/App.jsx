@@ -1,3 +1,5 @@
+import Particles from "solid-particles";
+import { loadFull } from "tsparticles";
 import logo from './logo.svg';
 import styles from './App.module.css';
 import blacksheep from './assets/blacksheep.png';
@@ -237,7 +239,10 @@ function Tech(props) {
 
 
 function App() {
-  console.log("ok");
+  const particlesInit = async (main) => {
+    await loadFull(main);
+  };
+
   return (
     <>
       <Header />
@@ -282,6 +287,121 @@ function App() {
           </Technologies>
         </Stack>
       </ContentWrap>
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        options={{
+          particles: {
+            number: {
+              value: 30,
+              density: {
+                enable: true,
+                value_area: 800
+              }
+            },
+            color: {
+              value: "#7289da"
+            },
+            shape: {
+              type: "circle",
+              stroke: {
+                width: 0,
+                color: "#000000"
+              },
+            },
+            opacity: {
+              value: 0.5,
+              random: false,
+              animation: {
+                enable: false,
+                speed: 1,
+                minimumValue: 0.1,
+                sync: false
+              }
+            },
+            size: {
+              value: 5,
+              random: true,
+              animation: {
+                enable: false,
+                speed: 40,
+                size_min: 0.1,
+                sync: false
+              }
+            },
+            links: {
+              enable: true,
+              distance: 300,
+              color: "#FFFFFF",
+              opacity: 0.2,
+              width: 1
+            },
+            move: {
+              enable: true,
+              speed: 2,
+              direction: "bottom",
+              random: false,
+              straight: false,
+              outModes: {
+                default: "out"
+              },
+              attract: {
+                enable: false,
+                rotateX: 600,
+                rotateY: 1200
+              }
+            },
+          },
+          "interactivity": {
+              "detect_on": "window",
+              "events": {
+                  "onhover": {
+                      "enable": true,
+                      "mode": "bubble"
+                  },
+                  "onclick": {
+                      "enable": false,
+                      "mode": "push"
+                  },
+                  "resize": true
+              },
+              "modes": {
+                  "grab": {
+                      "distance": 400,
+                      "line_linked": {
+                          "opacity": 1
+                      }
+                  },
+                  "bubble": {
+                      "distance": 400,
+                      "size": 10,
+                      "duration": 2,
+                      "opacity": 8,
+                      "speed": 3
+                  },
+                  "repulse": {
+                      "distance": 100,
+                      "duration": 1
+                  },
+                  "push": {
+                      "particles_nb": 4
+                  },
+                  "remove": {
+                      "particles_nb": 2
+                  }
+              }
+          },
+          "retina_detect": true,
+          "config_demo": {
+              "hide_card": false,
+              "background_color": "#b61924",
+              "background_image": "",
+              "background_position": "50% 50%",
+              "background_repeat": "no-repeat",
+              "background_size": "cover"
+          }
+        }}
+      />
     </>
   );
 }
