@@ -1,3 +1,7 @@
+import autumn_1 from './autumn_1.jpg';
+import urban_1 from './urban_1.jpg';
+import vaporwave from './vaporwave.jpg';
+
 document.onmousemove = e => {
   for(const card of document.getElementsByClassName("card")) {
     const rect = card.getBoundingClientRect(),
@@ -11,17 +15,17 @@ document.onmousemove = e => {
 
 const themes = [
   [
-    "autumn_1.jpg",
+    autumn_1,
     "'Josefin Sans', sans-serif",
     "#083d77"
   ],
   [
-    "urban_1.jpg",
+    urban_1,
     "'Josefin Sans', sans-serif",
     "#083d77"
   ],
   [
-    "vaporwaveqqq.jpg",
+    vaporwave,
     "Broadway, sans-serif",
     "#f4d35e"
   ]
