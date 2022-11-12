@@ -48,6 +48,7 @@ setTimeout(function() {  // https://stackoverflow.com/questions/27938900/how-to-
 const container = document.querySelector('#hero').querySelector("h1");
 const me = document.querySelector('#me');
 const starring = document.querySelector('#starring');
+const works = starring.getElementsByClassName("work");
 
 const func = function() {
   var scrollTop = window.scrollY;
@@ -57,7 +58,7 @@ const func = function() {
   // console.log(rme.top, rstarr.top - rme.top)
 
   if(rme.top < 0) {
-    let val = 1-((rme.top * -1)/(rstarr.top - rme.top))
+    let val = 1-(-(rme.top)/(rstarr.top - rme.top))
     container.style.setProperty("--darkness", `${Math.round(val*100)/100}`)
   } else {
     container.style.setProperty("--darkness", `100`)
@@ -66,6 +67,11 @@ const func = function() {
   let opacityVal = Math.min(50, (scrollTop / 50));
 
   container.style.setProperty("--filter", `blur(${opacityVal}px)`)
+
+  for(const work of works) {
+    let val = -(work.offsetHeight/4)
+    work.style.marginTop = `${val}px`;
+  }
 }
 
 // https://codepen.io/sotayamashita/pen/DZZZmj
