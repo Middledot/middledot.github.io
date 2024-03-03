@@ -1,6 +1,6 @@
 import autumn_1 from './autumn_1.jpg';
 import urban_1 from './urban_1.jpg';
-import vaporwave from './vaporwave.jpg';
+import vaporwave from './saturn.png';
 
 document.onmousemove = e => {
   for(const card of document.getElementsByClassName("card")) {
@@ -26,9 +26,14 @@ const themes = [
   ],
   [
     vaporwave,
-    "Broadway, sans-serif",
+    "'Josefin Sans', sans-serif",
     "#f4d35e"
-  ]
+  ],
+  // [
+  //   vaporwave,
+  //   "'Josefin Sans', sans-serif",
+  //   "#f4d35e"
+  // ]
 ]
 
 let r = document.querySelector(":root");
